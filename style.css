@@ -1,0 +1,223 @@
+/* ======== VARIABLES CSS ======== */
+:root {
+    --header-height: 4.5rem;
+    --gradient-color: linear-gradient(90deg, #C02425, #F07E23);
+    --first-color: #F07E23;
+    --second-color: #C02425;
+    --title-color: #333333;
+    --text-color: #555555;
+    --body-color: #FFFFFF;
+    --container-color: #F9F9F9;
+    --body-font: 'Lato', sans-serif;
+    --title-font: 'Poppins', sans-serif;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+}
+
+/* ======== BASE ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    line-height: 1.6; /* Améliore la lisibilité du texte */
+}
+
+h1, h2, h3 {
+    font-family: var(--title-font);
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Évite les espaces indésirables sous les images */
+}
+
+/* ======== LAYOUT ======== */
+.container {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5rem;
+}
+
+.section {
+    padding: 6rem 0 2rem;
+}
+
+.section__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* ======== HEADER & NAV ======== */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--body-color);
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--title-font);
+    color: var(--title-color);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.nav__logo-img {
+    width: 120px; /* Taille augmentée pour une meilleure lisibilité */
+}
+
+.nav__menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav__link {
+    color: var(--text-color);
+    font-weight: 700;
+    transition: color .3s;
+}
+
+.nav__link:hover {
+    color: var(--first-color);
+}
+
+/* ======== BUTTON ======== */
+.button {
+    display: inline-block;
+    background: var(--gradient-color);
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    transition: transform .3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+/* ======== HERO ======== */
+/* ======== HERO ======== */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('terasse.png') no-repeat center center/cover;
+    background-position: center 30%; /* Ajuste la position verticale pour mieux centrer la chef */
+}
+.hero__content {
+    text-align: center;
+    color: #fff;
+}
+
+.hero__title {
+    font-size: var(--h1-font-size);
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.hero__description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+/* ======== ABOUT ======== */
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+}
+
+.about__image img {
+    border-radius: 0.5rem;
+}
+
+/* ======== SPECIALTIES ======== */
+.specialties__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.dish-card {
+    background-color: var(--container-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform .3s;
+}
+
+.dish-card:hover {
+    transform: translateY(-5px);
+}
+
+.dish-card__title {
+    font-size: var(--h3-font-size);
+    margin: 1rem 0 0.5rem 0;
+}
+
+.dish-card__description {
+    padding: 0 1rem 1.5rem 1rem;
+}
+
+/* ======== FOOTER ======== */
+.footer {
+    background-color: var(--title-color);
+    color: #fff;
+    padding-top: 4rem;
+}
+
+.footer__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+
+.footer__section h3 {
+    color: var(--first-color);
+    margin-bottom: 1rem;
+}
+
+.footer__copy {
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid #444;
+}

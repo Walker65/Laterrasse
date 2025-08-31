@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles spécifiques au menu pour une meilleure mise en page */
+        .menu__section {
+            margin-bottom: 4rem;
+        }
+
+        .menu__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-card {
+            background-color: var(--container-color);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform .3s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-card__image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .menu-card__content {
+            padding: 1.5rem;
+        }
+
+        .menu-card__title {
+            font-size: var(--h3-font-size);
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-card__description {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .menu-card__price {
+            font-weight: 700;
+            color: var(--first-color);
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="logo.png" alt="Logo La Terrasse" class="nav__logo-img">
+            </a>
+
+            <ul class="nav__menu">
+                <li class="nav__item"><a href="index.html" class="nav__link">Accueil</a></li>
+                <li class="nav__item"><a href="menu.html" class="nav__link">Le Menu</a></li>
+                <li class="nav__item"><a href="about.html" class="nav__link">À Propos</a></li>
+                <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+            </ul>
+
+            <a href="https://wa.me/2290165294332" class="button">Réserver une table</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <div class="container">
+                <h1 class="section__title">Notre Menu</h1>
+
+                <div class="menu__section">
+                    <h2>Plats Locaux</h2>
+                    <div class="menu__grid">
+                        <div class="menu-card">
+                            <img src="https://via.placeholder.com/400x300" alt="Plat local 1" class="menu-card__image">
+                            <div class="menu-card__content">
+                                <h3 class="menu-card__title">Plat Local 1</h3>
+                                <p class="menu-card__description">Description du plat local, avec ses ingrédients typiques et sa préparation traditionnelle.</p>
+                                <span class="menu-card__price">15,00 €</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://via.placeholder.com/400x300" alt="Plat local 2" class="menu-card__image">
+                            <div class="menu-card__content">
+                                <h3 class="menu-card__title">Plat Local 2</h3>
+                                <p class="menu-card__description">Description détaillée du plat, de ses saveurs et de son origine régionale.</p>
+                                <span class="menu-card__price">18,50 €</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://via.placeholder.com/400x300" alt="Plat local 3" class="menu-card__image">
+                            <div class="menu-card__content">
+                                <h3 class="menu-card__title">Plat Local 3</h3>
+                                <p class="menu-card__description">Description alléchante du plat, parfaite pour donner envie aux clients de le goûter.</p>
+                                <span class="menu-card__price">20,00 €</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu__section">
+                    <h2>Plats Modernes</h2>
+                    <div class="menu__grid">
+                        <div class="menu-card">
+                            <img src="https://via.placeholder.com/400x300" alt="Plat moderne 1" class="menu-card__image">
+                            <div class="menu-card__content">
+                                <h3 class="menu-card__title">Plat Moderne 1</h3>
+                                <p class="menu-card__description">Ce plat moderne est une fusion de saveurs inattendues, avec une présentation soignée et élégante.</p>
+                                <span class="menu-card__price">22,50 €</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://via.placeholder.com/400x300" alt="Plat moderne 2" class="menu-card__image">
+                            <div class="menu-card__content">
+                                <h3 class="menu-card__title">Plat Moderne 2</h3>
+                                <p class="menu-card__description">Un plat contemporain, élaboré avec des techniques de cuisine de pointe et des ingrédients de haute qualité.</p>
+                                <span class="menu-card__price">25,00 €</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="https://via.placeholder.com/400x300" alt="Plat moderne 3" class="menu-card__image">
+                            <div class="menu-card__content">
+                                <h3 class="menu-card__title">Plat Moderne 3</h3>
+                                <p class="menu-card__description">Une création culinaire audacieuse et artistique, idéale pour les amateurs de nouvelles expériences gustatives.</p>
+                                <span class="menu-card__price">28,00 €</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__section">
+                <h3>À propos</h3>
+                <p>Découvrez notre histoire, notre passion et notre engagement pour une cuisine authentique et savoureuse.</p>
+            </div>
+            <div class="footer__section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>Téléphone: +229 01 65 29 43 32</li>
+                    <li>Email: contact@votre-restaurant.com</li>
+                    <li>Adresse: 123 Rue de la Gourmandise, Ville</li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h3>Horaires</h3>
+                <ul>
+                    <li>Lundi - Vendredi: 11h - 22h</li>
+                    <li>Samedi - Dimanche: 12h - 23h</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <p>&copy; 2025 Votre Restaurant. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
